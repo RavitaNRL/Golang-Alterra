@@ -7,70 +7,68 @@ import (
 
 type Student struct {
 	Name  string
-	Score []int
+	Score int
 }
 
-func (s *Student) AddScore(score int) {
-	s.Score = append(s.Score, score)
-}
+type Students []Student
 
-func (s *Student) GetAverageScore() float64 {
+func (z Students) AverageScore() float64 {
 	var sum int
-	for _, score := range s.Score {
-		sum += score
+	for _, student := range z {
+		sum += student.Score
 	}
-	avg := float64(sum) / float64(len(s.Score))
-	return math.Round(avg)
+	return float64(sum) / float64(len(z))
 }
 
-func (s *Student) GetMinScore() (string, int) {
-	var minScore int = math.MaxInt64
+func (x Students) MinScore() (string, int) {
+	var minScore int = math.MaxInt32
 	var minName string
-	for i, score := range s.Score {
-		if score < minScore {
-			minScore = score
-			minName = s.Name + fmt.Sprintf(" (%d)", i+1)
+
+	for _, student := range x {
+		if student.Score < minScore {
+			minScore = student.Score
+			minName = student.Name
 		}
 	}
 	return minName, minScore
 }
 
-func (s *Student) GetMaxScore() (string, int) {
-	var maxScore int
-	var maxName string
-	for i, score := range s.Score {
-		if score > maxScore {
-			maxScore = score
-			maxName = s.Name + fmt.Sprintf(" (%d)", i+1)
+func (s Students) MaksScore() (string, int) {
+	var maksScore int = math.MinInt32
+	var maksName string
+
+	for _, student := range s {
+		if student.Score > maksScore {
+			maksScore = student.Score
+			maksName = student.Name
 		}
 	}
-	return maxName, maxScore
+	return maksName, maksScore
 }
 
 func main() {
-	var students []Student
+	var students Students
 
-	for i := range students {
-		if len(students[i].Score) < 5 {
-			fmt.Printf("Input %d Student's Name ", i+1)
-			fmt.Scanln(&students[i].Name)
-			fmt.Printf("Input %d Student's Score ", i+1)
-			var score int
-			fmt.Scanln(&score)
-			students[i].AddScore(score)
+	for i := 0; i < 5; i++ {
+		var name string
+		var score int
+		fmt.Printf("Input %d student name: ", i+1)
+		fmt.Scan(&name)
+		fmt.Printf("Input %d student score: ", i+1)
+		fmt.Scan(&score)
+
+		student := Student{
+			Name:  name,
+			Score: score,
 		}
+		students = append(students, student)
 	}
 
-	var totalScore int
-	for _, s := range students {
-		totalScore += int(s.GetAverageScore())
-		fmt.Printf("%s average score: %d\n", s.Name, int(s.GetAverageScore()))
+	averageScore := students.AverageScore()
+	minName, minScore := students.MinScore()
+	maksName, maksScore := students.MaksScore()
 
-		minName, minScore := s.GetMinScore()
-		fmt.Printf("Min score of %s: %d\n", minName, minScore)
-
-		maxName, maxScore := s.GetMaxScore()
-		fmt.Printf("Max score of %s: %d\n", maxName, maxScore)
-	}
-	fmt.Printf("Overall average score: %d\n", totalScore/len(students))
+	fmt.Printf("Average score: %.2f\n", averageScore)
+	fmt.Printf("Min score of student: %s %d\n", minName, minScore)
+	fmt.Printf("Max score of student: %s %d\n", maksName, maksScore)
 }
