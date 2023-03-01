@@ -11,7 +11,7 @@ type Mobil struct {
 	fuelIn float64 //  untuk menampung bahan bakar yang ada dengan satuan liter
 }
 
-func (mobil Mobil) PerhitunganJarakTempuh() float64 { // method CalculateMileage menghitung jarak yang ditempuh dengan bahan bakar 1.5 liter
+func (mobil Mobil) PerhitunganJarakTempuh() float64 { // PerhitunganJarakTempuh merupakan nama method untuk menghitung jarak yang ditempuh dengan bahan bakar 1.5 liter
 	JarakTempuh := mobil.fuelIn * 1.5
 	return JarakTempuh // variabel untuk menyimpan perhitungan jarak yang dapat ditempuh
 }

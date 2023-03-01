@@ -8,6 +8,7 @@ import (
 	"sort"
 )
 
+//pendaklarasian struct
 type pair struct {
 	name  string
 	count int
@@ -27,7 +28,7 @@ func MostAppearItem(items []string) []pair {
 		for k, v := range itemCount {
 			pairs = append(pairs, pair{k, v})
 			j++
-			
+
 		}
 
 		sort.Slice(pairs, func(i, j int) bool {
@@ -35,6 +36,7 @@ func MostAppearItem(items []string) []pair {
 		})
 
 		return pairs
+	}
 }
 
 func main() {
@@ -43,6 +45,5 @@ func main() {
 	fmt.Println(MostAppearItem([]string{"A", "B", "B", "C", "A", "A", "A", "B", "A", "D", "D"}))
 	//A -> 5 B -> 3 C -> 1 D -> 2
 	fmt.Println(MostAppearItem([]string{"football", "basketball", "tenis"}))
-
 
 }

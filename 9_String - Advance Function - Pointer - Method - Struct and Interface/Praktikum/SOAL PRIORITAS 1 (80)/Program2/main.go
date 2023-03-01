@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+//pendaklariasn struct
 type Student struct {
 	Name  string
 	Score int
@@ -12,7 +13,7 @@ type Student struct {
 
 type Students []Student
 
-func (z Students) AverageScore() float64 {
+func (z Students) ratarataScore() float64 {
 	var sum int
 	for _, student := range z {
 		sum += student.Score
@@ -64,11 +65,11 @@ func main() {
 		students = append(students, student)
 	}
 
-	averageScore := students.AverageScore()
+	ratarataScore := students.ratarataScore()
 	minName, minScore := students.MinScore()
 	maksName, maksScore := students.MaksScore()
 
-	fmt.Printf("Average score: %.2f\n", averageScore)
+	fmt.Printf("Average score: %.2f\n", ratarataScore)
 	fmt.Printf("Min score of student: %s %d\n", minName, minScore)
 	fmt.Printf("Max score of student: %s %d\n", maksName, maksScore)
 }
