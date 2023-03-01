@@ -5,21 +5,22 @@ package main
 
 import "fmt"
 
+//pendaklarasian struct
 type Mobil struct {
 	Type   string
-	FuelIn float64 // variabel FuelIn untuk menampung bahan bakar yang ada dengan satuan liter
+	fuelIn float64 //  untuk menampung bahan bakar yang ada dengan satuan liter
 }
 
-func (mobil Mobil) CalculateMileage() float64 { // method CalculateMileage menghitung jarak yang ditempuh dengan bahan bakar 1.5 liter
-	mileage := mobil.FuelIn * 1.5
-	return mileage // variabel untuk menyimpan perhitungan jarak yang dapat ditempuh
+func (mobil Mobil) PerhitunganJarakTempuh() float64 { // method CalculateMileage menghitung jarak yang ditempuh dengan bahan bakar 1.5 liter
+	JarakTempuh := mobil.fuelIn * 1.5
+	return JarakTempuh // variabel untuk menyimpan perhitungan jarak yang dapat ditempuh
 }
 
 func main() {
-	myMobil := Mobil{Type: "Station Wagon", FuelIn: 30.5}
-	mileage := myMobil.CalculateMileage()
+	myMobil := Mobil{Type: "Station Wagon", fuelIn: 30.5}
+	JarakTempuh := myMobil.PerhitunganJarakTempuh()
 
-	fmt.Println("Jarak yang dapat ditempuh oleh mobil", myMobil.Type, "dengan bahan bakar yang sedang terisi 1,5 Liter adalah", mileage, "km")
+	fmt.Println("Jarak yang dapat ditempuh oleh mobil", myMobil.Type, "dengan bahan bakar yang sedang terisi 1,5 Liter adalah", JarakTempuh, "km")
 	//kegunaan dari myMobil.Type adalah untuk memanggil type mobil agar tercetak pada bagian output program.
 
 }
