@@ -8,42 +8,40 @@ import (
 	"sort"
 )
 
-//pendaklarasian struct
+//pendaklarisan struct dengan nama struct yaitu pair.
 type pair struct {
 	name  string
 	count int
 }
 
 func MostAppearItem(items []string) []pair {
-	itemCount := make(map[string]int)
+	// membuat sebuah map untuk menampung atau menghitung jumlah kemunculan setiap barang.
+	// nama map yaitu jumlah.
+	jumlah := make(map[string]int)
+	// akan melakukan perulangan sebanyak jumlah item yang ada.
 	for _, item := range items {
-		if _, ok := itemCount[item]; ok {
-			itemCount[item]++
-		} else {
-			itemCount[item] = 1
-		}
-
-		pairs := make([]pair, 0, len(itemCount))
-		j := 0
-		for k, v := range itemCount {
-			pairs = append(pairs, pair{k, v})
-			j++
-
-		}
-
-		sort.Slice(pairs, func(i, j int) bool {
-			return pairs[i].count > pairs[j].count
-		})
-
-		return pairs
+		jumlah[item]++
 	}
+
+	//membuat slice dari struct pair dengan nama itemCounts untuk menampung nama barang dan jumlah kemunculannya.
+	itemCounts := make([]pair, 0, len(jumlah))
+	for name, count := range jumlah {
+		itemCounts = append(itemCounts, pair{name, count})
+	}
+
+	// mengurutkan slice berdasarkan jumlah kemunculan dari yang terbesar
+	sort.Slice(itemCounts, func(z, k int) bool {
+		return itemCounts[z].count < itemCounts[k].count
+	})
+
+	return itemCounts
 }
 
 func main() {
 	fmt.Println(MostAppearItem([]string{"js", "js", "golang", "ruby", "ruby", "js", "js"}))
-	//golang -> 1 ruby -> 2 js -> 4
-	fmt.Println(MostAppearItem([]string{"A", "B", "B", "C", "A", "A", "A", "B", "A", "D", "D"}))
-	//A -> 5 B -> 3 C -> 1 D -> 2
+	// output: [{js 4} {ruby 2} {golang 1}]
+	fmt.Println(MostAppearItem([]string{"A", "B", "C", "A", "A", "B", "A", "D", "D"}))
+	// output: [{A 4} {B 2} {D 2} {C 1}]
 	fmt.Println(MostAppearItem([]string{"football", "basketball", "tenis"}))
-
+	// output: [{football 1} {basketball 1} {tenis 1}]
 }

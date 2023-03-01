@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func fibonacci(number int) int {
+func fibonacci(number int) int { // parameter number bertipe data integer dan perhitungan fibonacci menggunakan fungsi rekursif.
 	//blok program percabangan if-else untuk menentukan nilai fibonacci.
 	if number == 0 {
 		return 0
