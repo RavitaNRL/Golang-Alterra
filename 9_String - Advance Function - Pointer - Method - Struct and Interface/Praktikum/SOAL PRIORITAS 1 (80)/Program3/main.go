@@ -24,8 +24,8 @@ func Compare(str1, str2 string) string {
 }
 
 func main() {
-	fmt.Println(Compare("AKA", "AKASHI")) // AKA
-	// fungsi dari compare untuk membandingan dua string untuk mengahasilkan substring yang sama.
+
+	// fungsi dari compare untuk membandingan dua string untuk mengahasilkan substring yang sama.fmt.Println(Compare("AKA", "AKASHI")) // AKA
 	fmt.Println(Compare("KANGOORO", "KANG"))  // KANG
 	fmt.Println(Compare("KIJANG", "KIJANG"))  // KIJANG
 	fmt.Println(Compare("KUPU-KUPU", "KUPU")) // KUPU
