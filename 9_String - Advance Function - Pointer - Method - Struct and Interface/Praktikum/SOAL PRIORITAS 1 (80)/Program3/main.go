@@ -8,17 +8,19 @@ import (
 	"strings"
 )
 
-func Compare(r, z string) string {
-	var result strings.Builder // type data string builder memiliki performa lebih cepat dibandingkan dengan type data string. serta dapat membantu dalam melakukan substring.
-	for k := 0; k < len(r); k++ {
-		for j := 0; j < len(z); j++ {
-			if r[k] == z[j] {
-				result.WriteByte(r[k]) // writebyte untuk menambahkan byte ke string yg sedan dibangun.
-				break
+func Compare(str1, str2 string) string {
+	var result string
+	for k := 0; k < len(str1); k++ {
+		for e := k + 1; e <= len(str1); e++ {
+			// percabangan untuk mengecek str mana yang akan menjadi string atau substring.
+			if strings.Contains(str2, str1[k:e]) {
+				if len(str1[k:e]) > len(result) {
+					result = str1[k:e]
+				}
 			}
 		}
 	}
-	return result.String()
+	return result
 }
 
 func main() {
