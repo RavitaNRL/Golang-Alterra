@@ -9,6 +9,7 @@ import "fmt"
 func caesar(offset int, input string) string {
 	// pendeklarasian variabel untuk menampung setiap karakter yang sudah di shift.
 	shifted := ""
+	//blok program untuk melakukan pergeseran pada setiap karakter yang diberikan menggunakan range input.
 	for _, karakter := range input {
 		if karakter == ' ' {
 			shifted += " "
