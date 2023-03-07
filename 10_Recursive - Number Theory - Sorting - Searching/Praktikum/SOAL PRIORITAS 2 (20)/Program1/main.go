@@ -22,4 +22,5 @@ func main() {
 	// [6, 5]
 	fmt.Println(playingDomino([][]int{[]int{6, 6}, []int{2, 4}, []int{3, 6}}, []int{5, 1}))
 	// "tutup kartu"
+
 }

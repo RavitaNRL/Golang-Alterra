@@ -22,6 +22,7 @@ func caesar(offset int, input string) string {
 		shifted += string(hrufbaru)
 	}
 	return shifted
+
 }
 
 func main() {

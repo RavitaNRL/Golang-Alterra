@@ -16,11 +16,14 @@ import "fmt"
 func MaxSequence(arr []int) int {
 	maxBilangan := 0
 	maxAkhirBilangan := 0
+
 	for _, val := range arr {
 		maxAkhirBilangan += val
+
 		if maxAkhirBilangan < 0 {
 			maxAkhirBilangan = 0
 		}
+
 		if maxBilangan < maxAkhirBilangan {
 			maxBilangan = maxAkhirBilangan
 		}

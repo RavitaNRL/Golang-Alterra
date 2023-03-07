@@ -39,9 +39,12 @@ func MostAppearItem(items []string) []pair {
 
 func main() {
 	fmt.Println(MostAppearItem([]string{"js", "js", "golang", "ruby", "ruby", "js", "js"}))
-	// output: [{js 4} {ruby 2} {golang 1}]
-	fmt.Println(MostAppearItem([]string{"A", "B", "C", "A", "A", "B", "A", "D", "D"}))
-	// output: [{A 4} {B 2} {D 2} {C 1}]
+	// output: [{golang 1} {ruby 2} {js 4}]
+
+	fmt.Println(MostAppearItem([]string{"A", "B", "B", "C", "A", "A", "B", "A", "D", "D"}))
+	// output: [{C 1} {D 2} {B 3} {A 4}]
+
 	fmt.Println(MostAppearItem([]string{"football", "basketball", "tenis"}))
 	// output: [{football 1} {basketball 1} {tenis 1}]
+
 }
