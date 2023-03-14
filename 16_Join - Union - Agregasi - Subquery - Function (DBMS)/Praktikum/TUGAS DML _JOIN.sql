@@ -228,15 +228,15 @@ INSERT INTO users (id, status, dob, gender, created_at, updated_at) VALUES
 
 --      i. Insert 3 transaksi di masing-masing user. (soal berlanjut ke soal 1).
 
-INSERT INTO transactions (id, users_id, payment_methods_id, status, total_qty, total_price, created_at, updated_at) VALUES 
+INSERT INTO transactions (id, user_id, payment_methods_id, status, total_qty, total_price, created_at, updated_at) VALUES 
 (1, 001, 1, '1', 5, 1000, '2021-01-20 18:05:17', '2022-05-23 09:08:01'),
 (2, 002, 2, '2', 6, 2000, '2022-03-01 00:05:07', '2023-05-24 07:08:01'),
 (3, 003, 3, '3', 2, 3000, '2021-03-01 00:05:07', '2023-05-23 09:08:01');
 
--- masih error pas diimplementasiin ke mysql!!!!
+
 --------------------------------------------------
 
---      i. Insert 3 product di masing-masing transaksi.
+--      j. Insert 3 product di masing-masing transaksi.
 
 INSERT INTO transactions_details (id, transactions_id, products_id, qty, price, created_at, updated_at) VALUES 
 (1, 1, 101, 1, 1000, '2021-01-20 18:05:17', '2022-05-23 09:08:01'),
