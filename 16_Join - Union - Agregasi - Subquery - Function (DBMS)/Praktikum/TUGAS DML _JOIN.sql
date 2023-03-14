@@ -328,22 +328,22 @@ INNER JOIN user ON transactions.user_id = user.id;
 
 -- 6. Buat function setelah data transaksi dihapus maka transaction detail terhapus juga dengan transaction id yang dimaksud.
 
--- DELETE FROM transactions  
--- WHERE transaction_id = <transaction_id> 
--- AND DELETE FROM transaction_details 
--- WHERE transaction_id = <transaction_id> 
+DELETE FROM transactions  
+WHERE transaction_id = <transaction_id> 
+AND DELETE FROM transaction_details 
+WHERE transaction_id = <transaction_id> 
 
 -- 7. Buat function setelah data transaksi detail dihapus maka data total_qty terupdate berdasarkan qty data transaction id yang dihapus.
 
--- CREATE FUNCTION UpdateTotalQty() 
--- RETURNS VOID 
--- AS
--- BEGIN 
---   UPDATE Total_Qty SET qty = 
---   (SELECT SUM(qty) 
---   FROM TransactionDetails
---   WHERE transaction_id NOT IN (SELECT transaction_id FROM DeletedTransaction))
--- END;
+CREATE FUNCTION UpdateTotalQty() 
+RETURNS VOID 
+AS
+BEGIN 
+  UPDATE Total_Qty SET qty = 
+  (SELECT SUM(qty) 
+  FROM TransactionDetails
+  WHERE transaction_id NOT IN (SELECT transaction_id FROM DeletedTransaction))
+END;
 
 -- 8. Tampilkan data products yang tidak pernah ada di tabel transaction_details dengan sub-query.
 
