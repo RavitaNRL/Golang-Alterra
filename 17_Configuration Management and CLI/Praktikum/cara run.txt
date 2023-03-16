@@ -1,0 +1,12 @@
+untuk mengeksekusi code program secara otomatis di linux dengan struktur folder, dengan cara :
+
+1. buka terminal pada linux dengan ubuntu. 
+2. buat code program sesuai dengan printah yaitu nano nama_file.sh
+3. gunakan perintah sebagai berikut untuk menjalankan :
+	1. simpan code program dan keluar dari terminal dengan shortcut ctrl+X
+	2. lalu ketik Y dan enter.
+	3. untuk memberikan hak akses eksekusi gunakan perintah chmod +x nama_file.sh
+	4. jalankan code program dengan perintah ./nama_file.sh
+	5. maka code program tersebut akan langsung dieksekusi. 
+4. jika sudah menjalankan code program dan ingin melihat dalam bentuk tree maka gunakan perintah tree.
+
