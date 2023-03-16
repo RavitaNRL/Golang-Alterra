@@ -101,14 +101,14 @@ CREATE TABLE user_payment_methods_details (
 CREATE TABLE transaksi (
 	id INT(11) PRIMARY KEY AUTO_INCREMENT,
     user_id INT(11),
-	payments_method_details_id INT,
+	payments_method_id INT,
 	transaksi_details_id INT,
 	status VARCHAR(10),
 	total_qty INT,
 	total_price INT,
 	created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	FOREIGN KEY(payments_method_details_id) REFERENCES payment_methods_details(id),
+	FOREIGN KEY(payments_method_id) REFERENCES payment_methods(id),
     FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
@@ -141,10 +141,9 @@ CREATE TABLE product (
     product_type_id INT(11),
     operator_id INT(11),
     transaction_details_id INT(11),
-    name VARCHAR(255),
-    price NUMERIC(25,2),
-    stock INT(11),
-    status VARCHAR(255),
+    code VARCHAR(20),
+    name VARCHAR(20),
+    status SMALLINT,
     create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     update_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (product_type_id) REFERENCES product_types(id),
