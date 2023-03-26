@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "198a861c-df8d-4d3b-aa13-103b9927006f",
+		"name": "section_22_RavitaNurulAsmi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26323083"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rvts@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "2424",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "RavitaAsmi",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ravitanrl@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "242402",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/jwt/user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk4NDYwNTMsIm5hbWUiOiJhc21pIiwidXNlcklEIjoyfQ.mq2B7oLLCvhJlqcaNyUGY1HeN6xCIfDGoXied71pu5Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/jwt/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"jwt",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
