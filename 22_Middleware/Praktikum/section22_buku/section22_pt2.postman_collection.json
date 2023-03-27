@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "ef64e6f4-d855-46e4-a22f-76880435b933",
+		"name": "section22_pt2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26323083"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/buku/jwt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidWt1SWQiOjMsImV4cCI6MTY3OTkzMjIwMCwianVkdWwiOiJraWF0IGtpYXQgUFROIn0.L2GpUcz0YiWOvgbHkSDLm7CIvhJLL1aVYTuRGbN3Zxc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ravtasmii@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "0203",
+							"type": "text"
+						},
+						{
+							"key": "judul",
+							"value": "ngoding itu mudah",
+							"type": "text"
+						},
+						{
+							"key": "penulis",
+							"value": "putri",
+							"type": "text"
+						},
+						{
+							"key": "penerbit",
+							"value": "deltaMas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/buku/jwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"buku",
+						"jwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/buku/jwt/4",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidWt1SWQiOjQsImV4cCI6MTY3OTkzNDA2MiwianVkdWwiOiIifQ.AdNdamE1VO_7n8PVe7D3BrSG2w_WL80DjiTi2ReCrps",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "judul",
+							"value": "mari membaca",
+							"type": "text"
+						},
+						{
+							"key": "penulis",
+							"value": "cahaya",
+							"type": "text"
+						},
+						{
+							"key": "penerbit",
+							"value": "deltaMas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/buku/jwt/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"buku",
+						"jwt",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/buku/jwt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidWt1SWQiOjQsImV4cCI6MTY3OTkzNDA2MiwianVkdWwiOiIifQ.AdNdamE1VO_7n8PVe7D3BrSG2w_WL80DjiTi2ReCrps",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/buku/jwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"buku",
+						"jwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/buku/jwt/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidWt1SWQiOjQsImV4cCI6MTY3OTkzNTI0NiwianVkdWwiOiJtZW1iYWNhIGJlcnNhbWEifQ.mbK-B9te1kxvNVj7BXkDAWHQe3RtOQ85_keuHMPgOao",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "judul",
+							"value": "taman bermain",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/buku/jwt/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"buku",
+						"jwt",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/buku/jwt/5",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidWt1SWQiOjQsImV4cCI6MTY3OTkzNTI0NiwianVkdWwiOiJtZW1iYWNhIGJlcnNhbWEifQ.mbK-B9te1kxvNVj7BXkDAWHQe3RtOQ85_keuHMPgOao",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/buku/jwt/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"buku",
+						"jwt",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

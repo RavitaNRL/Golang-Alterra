@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "30e977c0-d5e2-4a5d-b287-7ee2d408ec5b",
+		"name": "section22",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26323083"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Ravita Asmi",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rvtas12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rvtas12@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/jwt",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk5MjgwODYsIm5hbWUiOiJSYXZpdGEgQXNtaSIsInVzZXJJZCI6OH0.A_Jt-olToNsvj0Ujtr0hy1xqjDoRt6863QNjynqmCjQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/user/jwt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"jwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/jwt/8",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk5MjgwODYsIm5hbWUiOiJSYXZpdGEgQXNtaSIsInVzZXJJZCI6OH0.A_Jt-olToNsvj0Ujtr0hy1xqjDoRt6863QNjynqmCjQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/user/jwt/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"jwt",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/jwt/8",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk5MjgwODYsIm5hbWUiOiJSYXZpdGEgQXNtaSIsInVzZXJJZCI6OH0.A_Jt-olToNsvj0Ujtr0hy1xqjDoRt6863QNjynqmCjQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Ravita Nurul Asmi",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/jwt/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"jwt",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/jwt/6",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk5MjgwODYsIm5hbWUiOiJSYXZpdGEgQXNtaSIsInVzZXJJZCI6OH0.A_Jt-olToNsvj0Ujtr0hy1xqjDoRt6863QNjynqmCjQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/user/jwt/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"jwt",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
