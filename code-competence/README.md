@@ -1,4 +1,4 @@
-Tugas perbaikan nilai 
+Tugas perbaikan code competence
 
 program diatas merupakan API untuk aplikasi inventory barang. 
 
